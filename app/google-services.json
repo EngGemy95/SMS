@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "999842028486",
+    "firebase_url": "https://smsapp-38d14.firebaseio.com",
+    "project_id": "smsapp-38d14",
+    "storage_bucket": "smsapp-38d14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:999842028486:android:d211c3a9e427e11397f0c7",
+        "android_client_info": {
+          "package_name": "com.fci_zu_eng_gemy_95.smssending"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "999842028486-7a4emirc20777536viu7nqenqb2l8rls.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fci_zu_eng_gemy_95.smssending",
+            "certificate_hash": "d8e6f1d74e5f1b217386a6942e2f694b771ee2c6"
+          }
+        },
+        {
+          "client_id": "999842028486-tb0oj7pvbgp5gcvqq0g9hjlb9n8d7p97.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-ZjUJcQe_V_8weGq0wHJGDF_sHenb1xw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "999842028486-tb0oj7pvbgp5gcvqq0g9hjlb9n8d7p97.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

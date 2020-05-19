@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:padding="10sp"
+        tools:context=".Settings">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:fillViewport="true"
+            android:paddingBottom="10sp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".Settings">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/frame"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/smsBtn_settings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:hint="Message"
+                        android:inputType="textPersonName"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/white"
+                        android:textSize="17sp"
+                        app:met_baseColor="@android:color/white"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/orange"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColorHint="@color/orange" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/layout_phoneAuth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            app:layout_constraintTop_toBottomOf="@+id/go_live_img">
+
+                            <LinearLayout
+                                android:id="@+id/layout_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Phone Number:"
+                                    android:textColor="@color/orange"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical">
+
+                                    <com.hbb20.CountryCodePicker
+                                        android:id="@+id/ccp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@android:color/white"
+                                        app:ccp_defaultNameCode="EG" />
+
+                                    <EditText
+                                        android:id="@+id/phoneText_settings"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="60dp"
+                                        android:backgroundTint="@android:color/white"
+                                        android:hint="********"
+                                        android:inputType="phone"
+                                        android:singleLine="true"
+                                        android:textColor="@android:color/white"
+                                        android:textColorHint="@android:color/darker_gray" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                       <!-- <TextView
+                            android:id="@+id/verifyText_settings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Verify"
+                            android:textColor="@color/green"
+                            android:textSize="18sp" />-->
+
+                        <EditText
+                            android:id="@+id/codeText_settings"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:backgroundTint="@android:color/white"
+                            android:drawableStart="@drawable/password"
+                            android:drawableTint="@android:color/white"
+                            android:hint="Write you code here..."
+                            android:inputType="phone"
+                            android:singleLine="true"
+                            android:textColor="@android:color/white"
+                            android:textColorHint="@android:color/white"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/layout_phoneAuth" />
+
+                    </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:weightSum="1"
+                      android:gravity="center"
+                      >
+                      <com.rengwuxian.materialedittext.MaterialEditText
+                          android:id="@+id/frequencyEdt_settings"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="20sp"
+                          android:hint="Frequency of sending"
+                          android:inputType="numberDecimal"
+                          android:textColor="@android:color/white"
+                          android:textColorHint="@android:color/white"
+                          android:textSize="17sp"
+                          android:layout_weight="1"
+                          app:met_baseColor="@android:color/white"
+                          app:met_floatingLabel="highlight"
+                          app:met_primaryColor="@color/orange"
+                          app:met_singleLineEllipsis="true"
+                          app:met_textColorHint="@color/orange" />
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="match_parent"
+                          android:text="( in Second )"
+                          android:textColor="@color/orange"
+                          android:textStyle="bold"
+                          android:textSize="20sp"
+                          android:gravity="bottom"
+                          android:paddingBottom="15sp"
+                          />
+                  </LinearLayout>
+                    <ToggleButton
+                        android:id="@+id/toggleBtn_settings"
+                        android:layout_width="150sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:layout_marginBottom="20sp"
+                        android:background="@android:color/white"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:textOff="Start"
+                        android:textOn="Stop"
+                        />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
